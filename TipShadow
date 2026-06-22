@@ -9,9 +9,9 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local PMouse = game:GetService("Players").LocalPlayer:GetMouse()
 
-if player.UserId ~= 6207483769 then
-	player:Kick("Ты не тот, кто ищет")
-end
+--if player.UserId ~= 6207483769 then
+--	player:Kick("Ты не тот, кто ищет")
+--end
 
 local SG = player.PlayerGui:FindFirstChildWhichIsA("ScreenGui")
 local IS = false
