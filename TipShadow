@@ -19,14 +19,17 @@ local IS = false
 if SG then
 	if SG.Enabled then
 		print("ЧЕТО НАШЕЛЪ")
+        SG.ResetOnSpawn = false
 	else
 		SG.Enabled = true
 		print("Включаю...")
+        SG.ResetOnSpawn = false
 	end
 else
 	SG = Instance.new("ScreenGui", player.PlayerGui)
 	print("Тайлера здесь нет...")
 	IS = true
+    SG.ResetOnSpawn = false
 end
 
 local FRAME = Instance.new("Frame",SG)
