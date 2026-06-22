@@ -9,9 +9,9 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local PMouse = game:GetService("Players").LocalPlayer:GetMouse()
 
---if player.UserId ~= 6207483769 then
---	player:Kick("Ты не тот, кто ищет")
---end
+if player.UserId ~= 6207483769 then
+	player:Kick("Ты не тот, кто ищет")
+end
 
 local SG = player.PlayerGui:FindFirstChildWhichIsA("ScreenGui")
 local IS = false
@@ -49,7 +49,7 @@ local TextKey1 = Instance.new("TextLabel",settingsFrame)
 local TextKey2 = Instance.new("TextLabel",settingsFrame)
 local TextKey3 = Instance.new("TextLabel",settingsFrame)
 
-local R = Instance.new("IntValue",game.ReplicatedStorage)
+local R = Instance.new("AdGui",game.ReplicatedStorage)
 R.Name = "Yabukvalinodextermorganbillybutcherbrianmouserantonchuguncapitanclark"
 
 FRAME.Size = UDim2.new(0, 114, 0, 262)
@@ -394,12 +394,14 @@ UIS.InputBegan:Connect(function(input)
 		task.wait(0.1)
 		IB = true
 	end
-	if Key1.EnumType == Enum.UserInputType.Keyboard then
+	---
+	if Key1.EnumType == Enum.KeyCode then
 		if input.KeyCode == Key1 then Clark() end
-	else
+	elseif Key1.EnumType == Enum.UserInputType then
 		if input.UserInputType == Key1 then Clark() end
 	end
-	if Key2.EnumType == Enum.UserInputType.Keyboard then
+	---
+	if Key2.EnumType == Enum.KeyCode then
 		if input.KeyCode == Key2 and isCustom and Punch then
 			Punch = false
 			warn("УДАРРР")
@@ -416,7 +418,7 @@ UIS.InputBegan:Connect(function(input)
 			Punch = true
 			flingActive = false
 		end
-	else
+	elseif Key2.EnumType == Enum.UserInputType then
 		if input.UserInputType == Key2 and isCustom and Punch then
 			Punch = false
 			warn("УДАРРР")
@@ -434,7 +436,8 @@ UIS.InputBegan:Connect(function(input)
 			flingActive = false
 		end
 	end
-	if Key3.EnumType == Enum.UserInputType.Keyboard then
+	---
+	if Key3.EnumType == Enum.KeyCode then
 		if input.KeyCode == Key3 then
 			if not humanoid then return end
 			local animator = humanoid:FindFirstChild("Animator")
@@ -458,7 +461,7 @@ UIS.InputBegan:Connect(function(input)
 				qTrack:Play()
 			end
 		end
-	else
+	elseif Key3.EnumType == Enum.UserInputType then
 		if input.UserInputType == Key3 then
 			if not humanoid then return end
 			local animator = humanoid:FindFirstChild("Animator")
