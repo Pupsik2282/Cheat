@@ -1,0 +1,528 @@
+if game.ReplicatedStorage:FindFirstChild("Yabukvalinodextermorganbillybutcherbrianmouserantonchuguncapitanclark") then
+	warn("Я запущен")
+	script:Destroy()
+end
+
+local UIS = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local PMouse = game:GetService("Players").LocalPlayer:GetMouse()
+
+if player.UserId ~= 6207483769 then
+	player:Kick("Ты не тот, кто ищет")
+end
+
+local SG = player.PlayerGui:FindFirstChildWhichIsA("ScreenGui")
+local IS = false
+
+if SG then
+	if SG.Enabled then
+		print("ЧЕТО НАШЕЛЪ")
+	else
+		SG.Enabled = true
+		print("Включаю...")
+	end
+else
+	SG = Instance.new("ScreenGui", player.PlayerGui)
+	print("Тайлера здесь нет...")
+	IS = true
+end
+
+local FRAME = Instance.new("Frame",SG)
+local CornerFrame = Instance.new("UICorner",FRAME)
+local DANE = Instance.new("TextLabel",FRAME)
+local CornerDANE = Instance.new("UICorner",DANE)
+local ClarkButton = Instance.new("TextButton",FRAME)
+local ClarkText = Instance.new("TextLabel",FRAME)
+local IYButton = Instance.new("TextButton",FRAME)
+local IYText = Instance.new("TextLabel",FRAME)
+local CloseButton = Instance.new("TextButton",FRAME)
+local SettingsButton = Instance.new("TextButton",FRAME)
+local DANE2 = Instance.new("TextButton",FRAME)
+local settingsFrame = Instance.new("Frame",FRAME)
+local CornerSettingsFrame = Instance.new("UICorner",settingsFrame)
+local KeyButton1 = Instance.new("TextButton",settingsFrame)
+local KeyButton2 = Instance.new("TextButton",settingsFrame)
+local KeyButton3 = Instance.new("TextButton",settingsFrame)
+local TextKey1 = Instance.new("TextLabel",settingsFrame)
+local TextKey2 = Instance.new("TextLabel",settingsFrame)
+local TextKey3 = Instance.new("TextLabel",settingsFrame)
+
+local R = Instance.new("AdGui",game.ReplicatedStorage)
+R.Name = "Yabukvalinodextermorganbillybutcherbrianmouserantonchuguncapitanclark"
+
+FRAME.Size = UDim2.new(0, 114, 0, 262)
+FRAME.Position = UDim2.new(0.07, -100, 0.723, -50)
+FRAME.BackgroundColor3 = Color3.new(0, 0, 0)
+FRAME.BackgroundTransparency = 0.5
+FRAME.ZIndex = 99
+FRAME.AnchorPoint = Vector2.new(0, 0)
+ClarkText.Size = UDim2.new(0, 80, 0, 34)
+ClarkText.Position = UDim2.new(0.15, 0, 0.145, 0)
+ClarkText.BackgroundTransparency = 1
+ClarkText.TextColor3 = Color3.new(1, 1, 1)
+ClarkText.Text = "Capitan Clark"
+ClarkText.ZIndex = 99
+ClarkText.TextScaled = true
+ClarkButton.Size = UDim2.new(0, 100, 0, 50)
+ClarkButton.Position = UDim2.new(0.05, 0, 0.289, 0)
+ClarkButton.BackgroundColor3 = Color3.new(0, 0, 0)
+ClarkButton.TextColor3 = Color3.new(1, 1, 1)
+ClarkButton.BackgroundTransparency = 0.5
+ClarkButton.ZIndex = 99
+ClarkButton.Text = "OFF"
+IYText.Size = UDim2.new(0, 80, 0, 34)
+IYText.Position = UDim2.new(0.15, 0, 0.496, 0)
+IYText.BackgroundTransparency = 1
+IYText.TextColor3 = Color3.new(1, 1, 0.9)
+IYText.Text = "Infinity Yield"
+IYText.ZIndex = 99
+IYText.TextScaled = true
+IYButton.Size = UDim2.new(0, 100, 0, 50)
+IYButton.Position = UDim2.new(0.05, 0, 0.65, 0)
+IYButton.BackgroundColor3 = Color3.new(0, 0, 0)
+IYButton.TextColor3 = Color3.new(1, 1, 1)
+IYButton.BackgroundTransparency = 0.5
+IYButton.ZIndex = 99
+IYButton.Text = "OPEN"
+SettingsButton.Size = UDim2.new(0, 100, 0, 23)
+SettingsButton.Position = UDim2.new(0.044, 0, 0.886, 0)
+SettingsButton.TextColor3 = Color3.new(1, 1, 1)
+SettingsButton.BackgroundColor3 = Color3.new(0, 0, 0)
+SettingsButton.BackgroundTransparency = 0.5
+SettingsButton.ZIndex = 99
+SettingsButton.TextSize = 8
+SettingsButton.Text = "SETTINGS"
+DANE.Size = UDim2.new(1, 0, 0.11, 0)
+DANE.Position = UDim2.new(0, 0, 0, 0)
+DANE.BackgroundColor3 = Color3.new(0, 0, 0)
+DANE.BackgroundTransparency = 0.5
+DANE.TextColor3 = Color3.new(1, 1, 1)
+DANE.Text = "Типа Shadow? V0.25"
+DANE.ZIndex = 99
+DANE.TextSize = 11
+DANE.Font = Enum.Font.Arimo
+DANE.TextYAlignment = Enum.TextYAlignment.Bottom
+CloseButton.Size = UDim2.new(0, 22, 0, 22)
+CloseButton.Position = UDim2.new(0.796, 0, 0, 0)
+CloseButton.TextColor3 = Color3.new(1, 1, 1)
+CloseButton.BackgroundTransparency = 1
+CloseButton.ZIndex = 101
+CloseButton.TextSize = 14
+CloseButton.Text = "X"
+CloseButton.Font = Enum.Font.Arimo
+DANE2.Size = UDim2.new(1, 0, 0.11, 0)
+DANE2.Position = UDim2.new(0, 0, 0, 0)
+DANE2.BackgroundTransparency = 1
+DANE2.BorderSizePixel = 0
+DANE2.ZIndex = 100
+DANE2.Text = ""
+settingsFrame.Size = UDim2.new(0, 206, 0, 159)
+settingsFrame.Position = UDim2.new(1.088, 0, 0.015, 0)
+settingsFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+settingsFrame.BackgroundTransparency = 0.5
+settingsFrame.ZIndex = 99
+settingsFrame.Visible = false
+TextKey1.Size = UDim2.new(0, 142, 0, 40)
+TextKey1.Position = UDim2.new(0.0432, 0, 0.057, 0)
+TextKey1.BackgroundTransparency = 1
+TextKey1.TextColor3 = Color3.new(1, 1, 1)
+TextKey1.Text = "Clark: OFF/ON"
+TextKey1.ZIndex = 99
+TextKey1.TextSize = 14
+TextKey1.Font = Enum.Font.Arimo
+TextKey2.Size = UDim2.new(0, 142, 0, 40)
+TextKey2.Position = UDim2.new(0.049, 0, 0.371, 0)
+TextKey2.BackgroundTransparency = 1
+TextKey2.TextColor3 = Color3.new(1, 1, 1)
+TextKey2.Text = "Clark: PUNCH"
+TextKey2.ZIndex = 99
+TextKey2.TextSize = 14
+TextKey2.Font = Enum.Font.Arimo
+TextKey3.Size = UDim2.new(0, 142, 0, 40)
+TextKey3.Position = UDim2.new(0.049, 0, 0.673, 0)
+TextKey3.BackgroundTransparency = 1
+TextKey3.TextColor3 = Color3.new(1, 1, 1)
+TextKey3.Text = "IMBA EMOTES"
+TextKey3.ZIndex = 99
+TextKey3.TextSize = 14
+TextKey3.Font = Enum.Font.Arimo
+KeyButton1.Size = UDim2.new(0, 40, 0, 40)
+KeyButton1.Position = UDim2.new(0.759, 0, 0.06, 0)	
+KeyButton1.BackgroundColor3 = Color3.new(0, 0, 0)
+KeyButton1.BackgroundTransparency = 0.5
+KeyButton1.TextColor3 = Color3.new(1, 1, 1)
+KeyButton1.Text = "E"
+KeyButton1.ZIndex = 99
+KeyButton1.TextSize = 14
+KeyButton1.Font = Enum.Font.Arimo
+KeyButton2.Size = UDim2.new(0, 40, 0, 40)
+KeyButton2.Position = UDim2.new(0.759, 0, 0.372, 0)
+KeyButton2.BackgroundColor3 = Color3.new(0, 0, 0)
+KeyButton2.BackgroundTransparency = 0.5
+KeyButton2.TextColor3 = Color3.new(1, 1, 1)
+KeyButton2.Text = "R"
+KeyButton2.ZIndex = 99
+KeyButton2.TextSize = 14
+KeyButton2.Font = Enum.Font.Arimo
+KeyButton3.Size = UDim2.new(0, 40, 0, 40)
+KeyButton3.Position = UDim2.new(0.759, 0, 0.675, 0)
+KeyButton3.BackgroundColor3 = Color3.new(0, 0, 0)
+KeyButton3.BackgroundTransparency = 0.5
+KeyButton3.TextColor3 = Color3.new(1, 1, 1)
+KeyButton3.Text = "Q"
+KeyButton3.ZIndex = 99
+KeyButton3.TextSize = 14
+KeyButton3.Font = Enum.Font.Arimo
+
+local WALK_EMOTE_ID = 71303649590318
+local IDLE_EMOTE_ID  = 106270389630163
+local PUNCH_EMOTE_ID = 71586913372400
+
+local Q_EMOTE_IDS = {
+	102398806058636,
+	114386008104939
+}
+
+local isCustom = false
+local walkTrack, idleTrack, PunchTrack = nil, nil, nil
+local humanoid = nil
+local runningConnection = nil
+local flingActive = false
+local flingThread = nil
+local qTrack = nil
+local Punch = true
+local MIA = false
+local dragOffset = Vector2.new(0, 0)
+local IB = true
+local key = nil
+local Key1 = Enum.KeyCode.E
+local Key2 = Enum.KeyCode.R
+local Key3 = Enum.KeyCode.Q
+
+local function urlToId(animationId)
+	animationId = string.gsub(animationId, "http://www%.roblox%.com/asset/%?id=", "")
+	animationId = string.gsub(animationId, "rbxassetid://", "")
+	return animationId
+end
+
+function resolveEmoteToAnimationId(emoteId)
+	local fallbackId = tonumber(emoteId)
+	if not emoteId or emoteId == "" then return fallbackId end
+
+	local objects
+	local ok = false
+	local idStr = tostring(emoteId)
+	for _, url in ipairs({
+		"rbxassetid://" .. idStr,
+		"http://www.roblox.com/asset/?id=" .. idStr
+		}) do
+		ok, objects = pcall(function()
+			return game:GetObjects(url)
+		end)
+		if ok and type(objects) == "table" and #objects > 0 then
+			break
+		end
+	end
+	if ok and type(objects) == "table" then
+		local function findAnimId(obj)
+			if obj:IsA("Animation") then
+				local animId = tonumber(urlToId(obj.AnimationId))
+				if animId and animId > 0 then
+					return animId
+				end
+			end
+			for _, child in ipairs(obj:GetChildren()) do
+				local found = findAnimId(child)
+				if found then return found end
+			end
+			return nil
+		end
+
+		local rootObj = objects[1]
+		if rootObj and rootObj.Parent == nil then
+			pcall(function() rootObj.Parent = workspace end)
+		end
+		if rootObj then
+			local foundRoot = findAnimId(rootObj)
+			if foundRoot then
+				pcall(function() rootObj:Destroy() end)
+				return foundRoot
+			end
+		end
+		for _, obj in ipairs(objects) do
+			local found = findAnimId(obj)
+			pcall(function() obj:Destroy() end)
+			if found then
+				return found
+			end
+		end
+	end
+	return fallbackId
+end
+
+local function getRealAnimationId(emoteId)
+	local resolved = resolveEmoteToAnimationId(emoteId)
+	if resolved and resolved > 0 then
+		return resolved
+	else
+		warn("Не удалось извлечь анимацию из эмоции, использую ID как есть: " .. tostring(emoteId))
+		return tonumber(emoteId) or 0
+	end
+end
+
+local function fling()
+	local lp = Players.LocalPlayer
+	local c, hrp, vel, movel = nil, nil, nil, 0.1
+	while flingActive do
+		local success, err = pcall(function()
+			RunService.Heartbeat:Wait()
+		end)
+		if not success then
+			warn("Ошибка в Heartbeat: " .. tostring(err))
+			break
+		end
+		c = lp.Character
+		hrp = c and c:FindFirstChild("HumanoidRootPart")
+		if hrp then
+			pcall(function()
+				vel = hrp.Velocity
+				hrp.Velocity = vel * 10000 + Vector3.new(0, 10000, 0)
+				RunService.RenderStepped:Wait()
+				hrp.Velocity = vel
+				RunService.Stepped:Wait()
+				hrp.Velocity = vel + Vector3.new(0, movel, 0)
+				movel = -movel
+			end)
+		end
+	end
+end
+
+local function setupCharacter(character)
+	humanoid = character:WaitForChild("Humanoid")
+	local animator = humanoid:WaitForChild("Animator")
+
+	local walkAnimId = getRealAnimationId(WALK_EMOTE_ID)
+	local idleAnimId = getRealAnimationId(IDLE_EMOTE_ID)
+	local punchAnimId = getRealAnimationId(PUNCH_EMOTE_ID)
+
+	local walkAnim = Instance.new("Animation")
+	walkAnim.AnimationId = "rbxassetid://" .. walkAnimId
+	walkTrack = animator:LoadAnimation(walkAnim)
+	walkTrack.Looped = true
+	walkTrack.Priority = Enum.AnimationPriority.Action
+
+	local idleAnim = Instance.new("Animation")
+	idleAnim.AnimationId = "rbxassetid://" .. idleAnimId
+	idleTrack = animator:LoadAnimation(idleAnim)
+	idleTrack.Looped = true
+	idleTrack.Priority = Enum.AnimationPriority.Action
+
+	local PunchAnim = Instance.new("Animation")
+	PunchAnim.AnimationId = "rbxassetid://" .. punchAnimId
+	PunchTrack = animator:LoadAnimation(PunchAnim)
+	PunchTrack.Looped = false
+	PunchTrack.Priority = Enum.AnimationPriority.Action
+
+	isCustom = false
+	ClarkButton.Text = "OFF"
+	if walkTrack then walkTrack:Stop() end
+	if idleTrack then idleTrack:Stop() end
+	flingActive = false
+	if qTrack then qTrack:Stop(); qTrack = nil end
+end
+
+player.CharacterAdded:Connect(setupCharacter)
+if player.Character then setupCharacter(player.Character) end
+
+local function Clark()
+	if not walkTrack or not idleTrack then
+		--Анимок нету
+		return
+	end
+	if not humanoid then
+		--Мабосика нету
+		return
+	end
+	isCustom = not isCustom
+	if isCustom then
+		ClarkButton.Text = "ON"
+		humanoid.WalkSpeed = 5
+		if runningConnection then runningConnection:Disconnect() end
+		runningConnection = humanoid.Running:Connect(function(speed)
+			if speed > 0 then
+				if walkTrack and not walkTrack.IsPlaying then walkTrack:Play() end
+				if idleTrack and idleTrack.IsPlaying then idleTrack:Stop() end
+			else
+				if idleTrack and not idleTrack.IsPlaying then idleTrack:Play() end
+				if walkTrack and walkTrack.IsPlaying then walkTrack:Stop() end
+			end
+		end)
+		if humanoid.MoveDirection.Magnitude > 0 then
+			walkTrack:Play()
+			idleTrack:Stop()
+		else
+			idleTrack:Play()
+			walkTrack:Stop()
+		end
+	else
+		ClarkButton.Text = "OFF"
+		if runningConnection then
+			runningConnection:Disconnect()
+			runningConnection = nil
+		end
+		walkTrack:Stop()
+		idleTrack:Stop()
+		humanoid.WalkSpeed = 16
+	end
+end
+
+local function Drag()
+	if not MIA then return end
+	FRAME.Position = UDim2.new(0, PMouse.X - 57, 0, PMouse.Y)
+end
+
+UIS.InputBegan:Connect(function(input)
+	IB = false
+	if input.UserInputType == Enum.UserInputType.Keyboard then
+		key = input.KeyCode
+		task.wait(0.1)
+		IB = true
+	else
+		key = input.UserInputType
+		task.wait(0.1)
+		IB = true
+	end
+	if Key1.EnumType == Enum.UserInputType.Keyboard then
+		if input.KeyCode == Key1 then Clark() end
+	else
+		if input.UserInputType == Key1 then Clark() end
+	end
+	if Key2.EnumType == Enum.UserInputType.Keyboard then
+		if input.KeyCode == Key2 and isCustom and Punch then
+			Punch = false
+			warn("УДАРРР")
+			if walkTrack then walkTrack:Stop() end
+			if idleTrack then idleTrack:Stop() end
+			if PunchTrack then PunchTrack:Play() end
+			flingActive = true
+			flingThread = coroutine.create(fling)
+			coroutine.resume(flingThread)
+			task.wait(0.27)
+			if PunchTrack then PunchTrack:Stop() end
+			if walkTrack then walkTrack:Play() end
+			if idleTrack then idleTrack:Play() end
+			Punch = true
+			flingActive = false
+		end
+	else
+		if input.UserInputType == Key2 and isCustom and Punch then
+			Punch = false
+			warn("УДАРРР")
+			if walkTrack then walkTrack:Stop() end
+			if idleTrack then idleTrack:Stop() end
+			if PunchTrack then PunchTrack:Play() end
+			flingActive = true
+			flingThread = coroutine.create(fling)
+			coroutine.resume(flingThread)
+			task.wait(0.27)
+			if PunchTrack then PunchTrack:Stop() end
+			if walkTrack then walkTrack:Play() end
+			if idleTrack then idleTrack:Play() end
+			Punch = true
+			flingActive = false
+		end
+	end
+	if Key3.EnumType == Enum.UserInputType.Keyboard then
+		if input.KeyCode == Key3 then
+			if not humanoid then return end
+			local animator = humanoid:FindFirstChild("Animator")
+			if not animator then return end
+
+			if qTrack and qTrack.IsPlaying then
+				qTrack:Stop()
+				qTrack = nil
+				return
+			end
+
+			local chosenEmoteId = Q_EMOTE_IDS[math.random(1, #Q_EMOTE_IDS)]
+			local realAnimId = getRealAnimationId(chosenEmoteId)
+
+			if realAnimId and realAnimId > 0 then
+				local anim = Instance.new("Animation")
+				anim.AnimationId = "rbxassetid://" .. realAnimId
+				qTrack = animator:LoadAnimation(anim)
+				qTrack.Looped = true
+				qTrack.Priority = Enum.AnimationPriority.Action2
+				qTrack:Play()
+			end
+		end
+	else
+		if input.UserInputType == Key3 then
+			if not humanoid then return end
+			local animator = humanoid:FindFirstChild("Animator")
+			if not animator then return end
+
+			if qTrack and qTrack.IsPlaying then
+				qTrack:Stop()
+				qTrack = nil
+				return
+			end
+
+			local chosenEmoteId = Q_EMOTE_IDS[math.random(1, #Q_EMOTE_IDS)]
+			local realAnimId = getRealAnimationId(chosenEmoteId)
+
+			if realAnimId and realAnimId > 0 then
+				local anim = Instance.new("Animation")
+				anim.AnimationId = "rbxassetid://" .. realAnimId
+				qTrack = animator:LoadAnimation(anim)
+				qTrack.Looped = true
+				qTrack.Priority = Enum.AnimationPriority.Action2
+				qTrack:Play()
+			end
+		end
+	end
+end)
+
+UIS.InputEnded:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then MIA = false end
+end)
+
+SettingsButton.MouseButton1Click:Connect(function() if settingsFrame.Visible then settingsFrame.Visible = false else settingsFrame.Visible = true end end)
+DANE2.MouseButton1Down:Connect(function() MIA = true end)
+ClarkButton.MouseButton1Click:Connect(Clark)
+RunService.RenderStepped:Connect(Drag)
+IYButton.MouseButton1Click:Connect(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))() end)
+
+
+KeyButton1.MouseButton1Click:Connect(function()
+	KeyButton1.Text = "..."
+	task.wait(0.11)
+	while IB do task.wait(0.01) end
+	KeyButton1.Text = key.Name
+	Key1 = key
+end)
+
+KeyButton2.MouseButton1Click:Connect(function()
+	KeyButton2.Text = "..."
+	task.wait(0.11)
+	while IB do task.wait(0.01) end
+	KeyButton2.Text = key.Name
+	Key2 = key
+end)
+
+KeyButton3.MouseButton1Click:Connect(function()
+	KeyButton3.Text = "..."
+	task.wait(0.11)
+	while IB do task.wait(0.01) end
+	KeyButton3.Text = key.Name
+	Key3 = key
+end)
+
+CloseButton.MouseButton1Click:Connect(function()
+	if IS then SG:Destroy() end
+	R:Destroy()
+	FRAME:Destroy()
+	script:Destroy()
+end) -- Интересно как нашел скрипт но ну и ладно
