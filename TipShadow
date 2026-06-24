@@ -13,25 +13,39 @@ if player.UserId ~= 6207483769 then
 	player:Kick("Ты не тот, кто ищет")
 end
 
-local SG = player.PlayerGui:FindFirstChildWhichIsA("ScreenGui")
+local GUI = player.PlayerGui:GetChildren()
+local SG = nil
 local IS = false
 
-if SG then
-	if SG.Enabled then
-		print("ЧЕТО НАШЕЛЪ")
-        SG.ResetOnSpawn = false
-	else
-		SG.Enabled = true
-		print("Включаю...")
-        SG.ResetOnSpawn = false
+for i, c in pairs(GUI) do
+	if c.ClassName == "ScreenGui" then
+		if c.Enabled == true then
+			SG = c
+			IS = true
+			print(c.Name)
+			break
+		end
 	end
-else
-	SG = Instance.new("ScreenGui", player.PlayerGui)
-	print("Тайлера здесь нет...")
-	IS = true
-    SG.ResetOnSpawn = false
 end
 
+--if SG then
+--	if SG.Enabled then
+--		print("ЧЕТО НАШЕЛЪ")
+--	else
+--		SG.Enabled = true
+--		print("Включаю...")
+--	end
+--else
+--	SG = Instance.new("ScreenGui", player.PlayerGui)
+--	SG.ResetOnSpawn = false   -- <-- важно
+--	print("Тайлера здесь нет...")
+--	IS = true
+--end
+
+if SG:FindFirstChild("Yabukvalinodextermorganbillybutcherbrianmouserantonchuguncapitanclark") then
+	
+end
+	
 local FRAME = Instance.new("Frame",SG)
 local CornerFrame = Instance.new("UICorner",FRAME)
 local DANE = Instance.new("TextLabel",FRAME)
@@ -61,6 +75,7 @@ FRAME.BackgroundColor3 = Color3.new(0, 0, 0)
 FRAME.BackgroundTransparency = 0.5
 FRAME.ZIndex = 99
 FRAME.AnchorPoint = Vector2.new(0, 0)
+FRAME.Name = "Yabukvalinodextermorganbillybutcherbrianmouserantonchuguncapitanclark"
 ClarkText.Size = UDim2.new(0, 80, 0, 34)
 ClarkText.Position = UDim2.new(0.15, 0, 0.145, 0)
 ClarkText.BackgroundTransparency = 1
@@ -102,7 +117,7 @@ DANE.Position = UDim2.new(0, 0, 0, 0)
 DANE.BackgroundColor3 = Color3.new(0, 0, 0)
 DANE.BackgroundTransparency = 0.5
 DANE.TextColor3 = Color3.new(1, 1, 1)
-DANE.Text = "Типа Shadow? V0.25"
+DANE.Text = "Типа Shadow? V0.26"
 DANE.ZIndex = 99
 DANE.TextSize = 11
 DANE.Font = Enum.Font.Arimo
@@ -341,11 +356,9 @@ if player.Character then setupCharacter(player.Character) end
 
 local function Clark()
 	if not walkTrack or not idleTrack then
-		--Анимок нету
 		return
 	end
 	if not humanoid then
-		--Мабосика нету
 		return
 	end
 	isCustom = not isCustom
@@ -531,4 +544,14 @@ CloseButton.MouseButton1Click:Connect(function()
 	R:Destroy()
 	FRAME:Destroy()
 	script:Destroy()
-end) -- Интересно как нашел скрипт но ну и ладно
+end)
+
+player.CharacterAdded:Connect(function()
+	task.wait(0.1) -- даём время на загрузку
+	local sg = player.PlayerGui:FindFirstChildWhichIsA("ScreenGui")
+	if not sg then
+		SG = Instance.new("ScreenGui", player.PlayerGui)
+		SG.ResetOnSpawn = false
+		IS = true
+	end
+end)
